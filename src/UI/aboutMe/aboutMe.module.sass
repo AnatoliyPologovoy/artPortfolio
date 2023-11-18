@@ -1,0 +1,45 @@
+@use "@/styles/index"
+@use "@/UI/promo/promo.module"
+
+.aboutMe
+  min-height: max-content
+  background-color: index.$color-dark-500
+  padding: 100px 0
+  color: index.$color-light-100
+
+.textContent
+  width: 450px
+  display: flex
+  flex-direction: column
+
+.desc
+  color: index.$color-light-200
+  text-transform: capitalize
+  font-size: 1.3rem
+  font-weight: 600
+
+.title
+  font-family: index.$font-family-extra
+  font-size: 3rem
+  font-weight: 700
+  padding-bottom: 20px
+  position: relative
+  margin: 10px 0 50px
+
+.text
+  margin-bottom: 1.1rem
+  color: index.$color-light-500
+  font-size: 1.2rem
+
+.pic
+  object-fit: cover
+  object-position: -100px
+  padding: 15px
+  border: 1px solid index.$color-dark-100
+
+.button
+  @extend .button
+  font-size: 1.1rem
+  height: 3rem
+  line-height: 3rem
+  align-self: flex-start

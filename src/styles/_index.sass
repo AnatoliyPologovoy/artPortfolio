@@ -1,0 +1,74 @@
+$font-family-main: 'Heebo', sans-serif
+$font-family-extra: 'Oswald', sans-serif
+
+$color-dark-900: #111
+$color-dark-500: #202020
+$color-dark-100: #333
+
+$color-light-900: #666666
+$color-light-500: #999
+$color-light-200: #ddd
+$color-light-100: #fff
+
+$bigTablet: 820px
+$tablet: 768px
+$mobile: 480px
+
+html
+  font-size: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+
+body
+  margin: 0
+  padding: 0
+  font-family: $font-family-main
+  font-size: 16px
+  font-weight: 300
+
+button
+  all: unset
+  cursor: pointer
+  color: inherit
+  text-align: center
+
+a
+  all: unset
+  text-align: center
+  display: inline-block
+  cursor: pointer
+
+
+@mixin bigTablet
+  @media screen and (max-width: $bigTablet)
+    @content
+
+@mixin tablet
+  @media screen and (max-width: $tablet)
+    @content
+
+@mixin mobile
+  @media screen and (max-width: $mobile)
+    @content
+
+.contentWrapper
+  max-width: 1440px
+  width: 90%
+  height: 100%
+  margin: 0 auto
+  //display: flex
+  //justify-content: center
+
+@include bigTablet
+  .contentWrapper
+    //padding: 0 30px
+
+@include mobile
+  .contentWrapper
+    //padding: 0 16px
