@@ -22,8 +22,8 @@ const content = [
 ];
 
 export const MyProject = () => {
-  const items = content.map((el) => (
-    <ProjectItem pic={el.pic} title={el.title} link={el.link} />
+  const items = content.map((el, i) => (
+    <ProjectItem pic={el.pic} title={el.title} link={el.link} key={i}/>
   ));
   return (
     <div className={s.myProject}>

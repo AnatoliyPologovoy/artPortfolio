@@ -28,8 +28,8 @@ const content = [
 ];
 
 export const Skills = () => {
-  const items = content.map((el) => (
-    <SkillItem pic={el.pic} title={el.title} text={el.text} />
+  const items = content.map((el, i) => (
+    <SkillItem pic={el.pic} title={el.title} text={el.text} key={i} />
   ));
   return (
     <div className={s.skills}>
