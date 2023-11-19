@@ -1,7 +1,8 @@
+/// <reference types="vite-plugin-svgr/client" />
 import s from "@/UI/footer/footer.module.sass"
-import {ReactComponent as Vk} from "@/assets/vk.svg"
-import {ReactComponent as Telegram} from "@/assets/telegram.svg"
-import {ReactComponent as Git} from "@/assets/git.svg"
+import Vk from "@/assets/vk.svg?react"
+import Telegram from "@/assets/telegram.svg?react"
+import Git from "@/assets/git.svg?react"
 
 export const Footer = () => {
 	// const items = content.map((el) => (
