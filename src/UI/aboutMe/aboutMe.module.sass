@@ -1,44 +1,83 @@
-@use "@/styles/index"
-@use "@/UI/promo/promo.module"
+@use "@/styles/boilerplate"
 
 .aboutMe
   min-height: max-content
-  background-color: index.$color-dark-500
+  background-color: boilerplate.$color-dark-500
   padding: 100px 0
-  color: index.$color-light-100
+  color: boilerplate.$color-light-100
+
+.content
+  width: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  @include boilerplate.bigTablet
+    flex-direction: column
 
 .textContent
-  width: 450px
+  width: 30%
+  padding: 0 10px
   display: flex
   flex-direction: column
+  @include boilerplate.bigTablet
+    width: 100%
+    padding: 0 20px 30px
 
 .desc
-  color: index.$color-light-200
+  color: boilerplate.$color-light-200
   text-transform: capitalize
   font-size: 1.3rem
   font-weight: 600
 
 .title
-  font-family: index.$font-family-extra
+  font-family: boilerplate.$font-family-extra
   font-size: 3rem
   font-weight: 700
   padding-bottom: 20px
   position: relative
   margin: 10px 0 50px
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 70px
+    width: 95px
+    height: 5px
+    background: boilerplate.$color-light-900
+    -webkit-transition: all .3s
+    transition: all .3s
+  &:hover:before
+    width: 175px
 
 .text
   margin-bottom: 1.1rem
-  color: index.$color-light-500
+  color: boilerplate.$color-light-500
   font-size: 1.2rem
 
+.photo
+  width: 50%
+  @include boilerplate.bigTablet
+    width: 60%
+  @include boilerplate.tablet
+    width: 80%
+  @include boilerplate.mobile
+    width: 90%
+
 .pic
+  width: 100%
+  height: 600px
   object-fit: cover
   object-position: -100px
   padding: 15px
-  border: 1px solid index.$color-dark-100
+  border: 1px solid boilerplate.$color-dark-100
+  @include boilerplate.bigTablet
+    height: 500px
+    object-position: -50px
+  @include boilerplate.mobile
+    height: 400px
+    object-position: -70px
 
 .button
-  @extend .button
   font-size: 1.1rem
   height: 3rem
   line-height: 3rem

@@ -15,7 +15,7 @@ export const AboutMe = () => {
 							<a href={'#'} className={s.button}>Download CV</a>
 						</div>
 						<div className={s.photo}>
-							<img src={photo} alt="Portret yang white man" className={s.pic} width={570} height={690}/>
+							<img src={photo} alt="Portret yang white man" className={s.pic} />
 						</div>
 					</div>
 				</div>

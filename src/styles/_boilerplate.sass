@@ -14,37 +14,6 @@ $bigTablet: 820px
 $tablet: 768px
 $mobile: 480px
 
-html
-  font-size: 100%
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-*,
-*::before,
-*::after
-  box-sizing: border-box
-
-
-body
-  margin: 0
-  padding: 0
-  font-family: $font-family-main
-  font-size: 16px
-  font-weight: 300
-
-button
-  all: unset
-  cursor: pointer
-  color: inherit
-  text-align: center
-
-a
-  all: unset
-  text-align: center
-  display: inline-block
-  cursor: pointer
-
-
 @mixin bigTablet
   @media screen and (max-width: $bigTablet)
     @content
@@ -62,13 +31,24 @@ a
   width: 90%
   height: 100%
   margin: 0 auto
-  //display: flex
-  //justify-content: center
+//display: flex
+//justify-content: center
 
-@include bigTablet
-  .contentWrapper
-    //padding: 0 30px
+//@include bigTablet
+//  .contentWrapper
+////padding: 0 30px
+//
+//@include mobile
+//  .contentWrapper
+////padding: 0 16px
 
-@include mobile
-  .contentWrapper
-    //padding: 0 16px
+.button
+  text-transform: uppercase
+  padding: 0 20px
+  font-family: $font-family-extra
+  letter-spacing: 1px
+  border: 1px solid $color-light-500
+  transition: all .3s
+  background-color: transparentize($color-dark-900, 0.6)
+  &:hover
+    background-color: transparentize($color-light-500, 0.4)
